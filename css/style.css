@@ -1,0 +1,310 @@
+/*IMPORTÇÕES*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*IMPORTÇÕES*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*INÍCIO FORMATAÇÃO GERAL*/
+
+body{
+  background: #F5F0FA;  
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 80px;
+  background: #252525;
+  
+}
+
+footer>p{
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+/* identical to box height */
+  text-transform: uppercase;
+}
+
+h2{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+/* identical to box height */
+  color: #252525;
+}
+
+h3{
+  font-size: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #535353;
+}
+/*FIM FORMATAÇÃO GERAL*/
+
+/*INÍCIO MENU*/
+
+.menu{
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(153, 59, 248, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.menu .container{
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-bc{
+  position: relative;
+  width: 240px;
+  height: 36.21px;
+  }
+
+.menu-links{
+  position: relative;
+  display: block;
+  width: 300px;
+  right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ul li{
+  display: inline;
+  padding: 2px;
+  line-height: 15px;
+}
+
+/*FIM MENU*/
+
+/*INÍCIO BEM-VINDO*/
+
+.boas-vindas{
+  position: relative;
+}
+
+.boas-vindas h2{
+  margin-top: 100px;
+  position: relative;
+}
+
+.boas-vindas a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  color: white;
+  margin-top: 24px;
+  width: 204px;
+  height: 56px;
+  border-radius: 16px;
+  background: #993BF8;
+}
+.texto-1{
+  margin-top: 16px;
+  position: relative;
+  width: 535px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}  
+
+.decoracao{
+  position: absolute;
+  width: 450px;
+  height: 700px;
+  right: 0;
+  top: -200px;
+  background: linear-gradient(180deg, #993BF8 0%, #7F1BE4 100%);
+  border-radius: 0px 0px 350px 350px;
+}
+
+/*FIM BEM-VINDO*/
+
+/*INÍCIO APRESENTAÇÃO*/
+
+.apresentacao{
+  position: relative;
+  width: 100%;
+  /* identical to box height */
+  text-align: center;
+  color: #252525;
+  font-size: 14px;
+  margin: 304px 0 104px;
+}
+
+.apresentacao .content{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.apresentacao .content .texto{
+  max-width: 650px;
+  text-align: right;
+}
+.apresentacao a.btn-link{
+  position: relative;
+  color: #993BF8;
+  text-decoration: underline;
+  font-size: 18px;
+  top: 48px;
+}
+
+.apresentacao ul li p{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-top: 10px;
+  line-height: 22px;
+  font-size: 16px;
+  
+}
+
+
+.apresentacao .fotos{
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  background: #993BF8;
+}
+
+.texto-2{
+  font-size: 20px;
+  line-height: 22px;
+  margin-top: 4px;
+  margin-bottom: 30px;
+}
+
+.ilustracoes{
+  position: absolute;
+  width: 544px;
+  height: 397.82px;
+  left: 160px;
+  top: 830px;
+  float: right;
+}
+
+
+/* #botao-comprar{
+  background: linear-gradient(90deg, #993BF8 0%, #7F1BE4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  width: 226px;
+  height: 27px;
+  left: calc(50% - 226px/2);
+  top: 1298px;
+  text-decoration: underline #993BF8;
+  font-weight: bold;
+
+} */
+
+/*FIM APRESENTAÇÃO*/
+
+/*INÍCIO IMAGEM-HOME*/
+
+
+/*FIM IMAGEM-HOME*/
+
+/*INÍCIO PRODUTOS*/
+
+.tituloproduto{
+  margin-top: 124px;
+  text-align: center;
+}
+
+.produtos{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  margin: 64px auto;
+
+}
+.produtos-item{
+  position: relative;
+  max-width: 256px;
+  height: 256px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+/*FIM PRODUTOS*/
+
+/*INÍCIO SOBRE-EMPRESA*/
+
+.fotosempresa{
+  position: relative;
+  width: 384px;
+  height: 428px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #993BF8 0%, #7F1BE4 100%);
+}
+
+.texto-equipe{
+  position: relative;
+  max-width: 650px;
+}
+
+.texto-equipe p{
+  position: relative;
+  line-height: 22px;
+  word-wrap: break-word;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.texto-equipe h2{
+  margin-bottom: 16px;
+}
+
+.empresa-container {
+  max-width: 1080px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 172px auto;
+}
+/*FIM SOBRE-EMPRESA*/
