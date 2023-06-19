@@ -145,7 +145,7 @@ ul li{
   width: 204px;
   height: 56px;
   border-radius: 16px;
-  background: #993BF8;
+  background: linear-gradient(90deg, #993BF8 0%, #7F1BE4 100%);
 }
 .texto-1{
   margin-top: 16px;
@@ -163,8 +163,29 @@ ul li{
   height: 700px;
   right: 0;
   top: -200px;
-  background: linear-gradient(180deg, #993BF8 0%, #7F1BE4 100%);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.decoracao .decoracao-foto{
+  position: relative;
+  width: 100%;
   border-radius: 0px 0px 350px 350px;
+}
+
+.decoracao .decoracao-item{
+  position: absolute;
+  max-width: 100%;
+}
+
+.decoracao .decoracao-item:nth-child(2){
+  left: -200px;
+  top: 30px;
+}
+.decoracao .decoracao-item:nth-child(3){
+  left: 100px;
+  top: 350px;
 }
 
 /*FIM BEM-VINDO*/
@@ -239,21 +260,6 @@ ul li{
 }
 
 
-/* #botao-comprar{
-  background: linear-gradient(90deg, #993BF8 0%, #7F1BE4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  width: 226px;
-  height: 27px;
-  left: calc(50% - 226px/2);
-  top: 1298px;
-  text-decoration: underline #993BF8;
-  font-weight: bold;
-
-} */
-
 /*FIM APRESENTAÇÃO*/
 
 /*INÍCIO IMAGEM-HOME*/
@@ -318,8 +324,9 @@ ul li{
 .empresa-container {
   max-width: 1080px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 172px auto;
+  flex-wrap: wrap-reverse;
 }
 /*FIM SOBRE-EMPRESA*/
