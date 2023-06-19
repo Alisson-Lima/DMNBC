@@ -32,8 +32,10 @@ footer{
   width: 100%;
   height: 72px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
   color: white;
   margin-top: 80px;
   background: #252525;
@@ -45,8 +47,15 @@ footer>p{
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  color: rgb(165, 165, 165);
 /* identical to box height */
   text-transform: uppercase;
+}
+
+footer p:last-child{
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+  margin-top: 8px;
 }
 
 h2{
@@ -178,7 +187,7 @@ ul li{
   justify-content: space-between;
 }
 .apresentacao .content .texto{
-  max-width: 650px;
+  max-width: 520px;
   text-align: right;
 }
 .apresentacao a.btn-link{
@@ -201,10 +210,16 @@ ul li{
 
 .apresentacao .fotos{
   position: relative;
-  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 500px;
   width: 100%;
   height: auto;
-  background: #993BF8;
+}
+
+.fotos img{
+  max-width: 100%;
 }
 
 .texto-2{
