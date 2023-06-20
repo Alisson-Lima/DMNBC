@@ -83,6 +83,10 @@ a{
 
 /*INÍCIO MENU*/
 
+.no-desktop{
+  display: none
+}
+
 .menu{
   box-sizing: border-box;
   position: relative;
@@ -107,23 +111,105 @@ a{
   position: relative;
   width: 240px;
   height: 36.21px;
-  }
+}
 
 .menu-links{
   position: relative;
   display: block;
   width: 300px;
-  right: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
 }
 
-ul li{
-  display: inline;
-  padding: 2px;
-  line-height: 15px;
+.menu-links{
+  list-style: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 772px) {
+
+  .no-desktop{
+    display: block;
+  }
+
+  .btn-menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    width: 40px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  .btn-menu span{
+    display: block;
+    position: relative;
+    background: #993BF8;
+    width: 80%;
+    height: 3px;
+    transition: .6s;
+  }
+
+  .active-btn span{
+    background: white;
+  }
+
+  .active-btn span:first-child{
+    transform: rotateZ(45deg);
+    top: 10px;
+  }
+  .active-btn span:last-child{
+    transform: rotateZ(-45deg);
+    bottom: 10px;
+  }
+  .active-btn span:nth-child(2){
+    opacity: 0;
+  }
+
+  
+
+  .menu-links{
+    position: absolute; 
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #7F1BE4;
+    color: white;
+    padding: 32px 0;
+    transform: translateY(-500px);
+    transition: .5s;
+  }
+
+  .menu-links li{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 2px;
+    line-height: 15px;
+  }
+
+  .menu-links li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .active{
+    transform: translateY(0);
+  }
 }
 
 /*FIM MENU*/
@@ -281,16 +367,19 @@ ul li{
 .produtos{
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   max-width: 1080px;
+  width: 100%;
   margin: 64px auto;
 }
 
 .produtos-item{
+  border: 1px solid red;
   position: relative;
   overflow: hidden;
+  width: 100%;
   max-width: 256px;
   height: 256px;
   border-radius: 16px;
@@ -334,7 +423,8 @@ ul li{
 }
 
 .indisponivel{
-  display: block;
+  display: grid;
+  place-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -358,16 +448,10 @@ ul li{
   border-radius: 16px;
   background: linear-gradient(180deg, #993BF8 0%, #7F1BE4 100%);
   background-image: url(/imgs/foto-equipe-ofc.jpeg);
-  background-size: 100%;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-/* .fotosempresa img{
-  width: 100%;
-  height: auto;
-  border: 1px solid red;
-} */
 
 .texto-equipe{
   position: relative;
