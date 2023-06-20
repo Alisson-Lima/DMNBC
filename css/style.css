@@ -79,6 +79,11 @@ a{
   text-decoration: none;
   color: #535353;
 }
+
+ul{
+  padding: 0;
+  list-style: none;
+}
 /*FIM FORMATAÇÃO GERAL*/
 
 /*INÍCIO MENU*/
@@ -376,7 +381,6 @@ a{
 }
 
 .produtos-item{
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
   width: 100%;
