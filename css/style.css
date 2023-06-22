@@ -62,7 +62,7 @@ h2{
   font-family: "Poppins";
   font-weight: 500;
   font-size: 48px;
-  line-height: 72px;
+  line-height: 110%;
 /* identical to box height */
   color: #252525;
 }
@@ -92,6 +92,10 @@ ul{
   display: none
 }
 
+.no-mobile{
+  display: block;
+}
+
 .menu{
   box-sizing: border-box;
   position: relative;
@@ -106,6 +110,7 @@ ul{
 .menu .container{
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,96 +138,13 @@ ul{
   padding: 0;
 }
 
-@media screen and (max-width: 772px) {
-
-  .no-desktop{
-    display: block;
-  }
-
-  .btn-menu{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    width: 40px;
-    height: 32px;
-    border: none;
-    cursor: pointer;
-    z-index: 9;
-  }
-
-  .btn-menu span{
-    display: block;
-    position: relative;
-    background: #993BF8;
-    width: 80%;
-    height: 3px;
-    transition: .6s;
-  }
-
-  .active-btn span{
-    background: white;
-  }
-
-  .active-btn span:first-child{
-    transform: rotateZ(45deg);
-    top: 10px;
-  }
-  .active-btn span:last-child{
-    transform: rotateZ(-45deg);
-    bottom: 10px;
-  }
-  .active-btn span:nth-child(2){
-    opacity: 0;
-  }
-
-  
-
-  .menu-links{
-    position: absolute; 
-    flex-direction: column;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #7F1BE4;
-    color: white;
-    padding: 32px 0;
-    transform: translateY(-500px);
-    transition: .5s;
-  }
-
-  .menu-links li{
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 48px;
-    padding: 2px;
-    line-height: 15px;
-  }
-
-  .menu-links li a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
-  }
-
-  .active{
-    transform: translateY(0);
-  }
-}
-
 /*FIM MENU*/
 
 /*INÍCIO BEM-VINDO*/
 
 .boas-vindas{
   position: relative;
+  padding: 0 20px;
 }
 
 .boas-vindas h2{
@@ -241,11 +163,17 @@ ul{
   height: 56px;
   border-radius: 16px;
   background: linear-gradient(90deg, #993BF8 0%, #7F1BE4 100%);
+  transition: .4s;
 }
+
+.boas-vindas a:hover{
+  filter: brightness(1.2);
+}
+
 .texto-1{
   margin-top: 16px;
   position: relative;
-  width: 535px;
+  max-width: 535px;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -300,7 +228,9 @@ ul{
 .apresentacao .content{
   position: relative;
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
+  padding: 0 20px;
 }
 .apresentacao .content .texto{
   max-width: 520px;
@@ -356,11 +286,6 @@ ul{
 
 
 /*FIM APRESENTAÇÃO*/
-
-/*INÍCIO IMAGEM-HOME*/
-
-
-/*FIM IMAGEM-HOME*/
 
 /*INÍCIO PRODUTOS*/
 
@@ -445,9 +370,20 @@ ul{
 
 /*INÍCIO SOBRE-EMPRESA*/
 
+.empresa-container {
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 172px auto;
+  gap: 16px;
+}
+
 .fotosempresa{
   position: relative;
-  width: 384px;
+  width: 100%;
+  max-width: 384px;
+  min-width: 300px;
   height: 428px;
   border-radius: 16px;
   background: linear-gradient(180deg, #993BF8 0%, #7F1BE4 100%);
@@ -473,13 +409,160 @@ ul{
 .texto-equipe h2{
   margin-bottom: 16px;
 }
-
-.empresa-container {
-  max-width: 1080px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 172px auto;
-  flex-wrap: wrap-reverse;
-}
 /*FIM SOBRE-EMPRESA*/
+
+/* RESPONSIVO */
+
+
+@media screen and (max-width: 1080px) {
+
+  .no-desktop{
+    display: block;
+  }
+
+  .no-mobile{
+    display: none;
+  }
+
+  /* MENU */
+
+  .menu .container{
+    padding: 0 16px;
+  }
+
+  .btn-menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    width: 40px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    z-index: 9;
+  }
+
+  .btn-menu span{
+    display: block;
+    position: relative;
+    background: #993BF8;
+    width: 80%;
+    height: 3px;
+    transition: .6s;
+  }
+
+  .active-btn span{
+    background: white;
+  }
+
+  .active-btn span:first-child{
+    transform: rotateZ(45deg);
+    top: 10px;
+  }
+  .active-btn span:last-child{
+    transform: rotateZ(-45deg);
+    bottom: 10px;
+  }
+  .active-btn span:nth-child(2){
+    opacity: 0;
+  }
+
+  
+
+  .menu-links{
+    position: absolute; 
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #7F1BE4;
+    color: white;
+    padding: 32px 0;
+    transform: translateY(-500px);
+    transition: .5s;
+  }
+
+  .menu-links li{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 2px;
+    line-height: 15px;
+  }
+
+  .menu-links li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .active{
+    transform: translateY(0);
+  }
+
+  /* FIM MENU */
+
+  /* HOME - BOAS VINDAS */
+
+  .boas-vindas{
+    text-align: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .boas-vindas a{
+    margin: 24px auto;
+  }
+
+  h2{
+    font-size: 36px;
+  }
+  
+  .boas-vindas p{
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* SAINDO DA CHATICE - APRESENTAÇÃO */
+
+  .apresentacao{
+    margin: 130px 0;
+  }
+
+  .apresentacao .content{
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  .apresentacao .content .texto{
+    text-align: left;
+  }
+
+  .apresentacao .content .fotos{
+    margin-top: 32px;
+  }
+
+  /* FIM HOME */
+}
+
+@media screen and (max-width: 732px) {
+  .empresa-container{
+    padding: 0 16px;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    justify-content: center;
+    margin: 64px auto;
+  }
+
+  .empresa-container p{
+    max-width: 500px;
+  }
+}
